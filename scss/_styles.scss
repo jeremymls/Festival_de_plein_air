@@ -1,0 +1,178 @@
+//Paramètres globaux
+$primary-color: #fbcd4b;
+$primary-color-2: #ffd700;
+$secondary-color: #88a550;
+$secondary-color-2: #86c40b;
+$font-color: #282623;
+$font-color-2: #a3a599;
+$font-color-white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, sans-serif;
+  color: $font-color;
+}
+
+// Paramètres du menu
+$menu-height: 80px;
+$menu-font-padding-top: 20px;
+$menu-font-size: 2rem;
+$menu-font-color: $primary-color;
+$menu-border-bottom-color: $primary-color-2;
+$menu-font-color-hover: $secondary-color;
+$menu-border-bottom-color-hover: $secondary-color-2;
+
+body {
+  // background-image: url("../assets/fond-pelicule.png");
+  // background-size: cover;
+  background-color: $font-color;
+  header {
+    nav {
+      width: 100%;
+      background-color: white;
+      position: fixed;
+      top: 0px;
+      z-index: 1;
+      height: $menu-height;
+      ul {
+        list-style-type: none;
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        li {
+          float: left;
+          width: 25%;
+          text-align: center;
+          &.active {
+            a {
+              color: $menu-font-color;
+              border-bottom: 2px solid $menu-border-bottom-color;
+            }
+          }
+          a {
+            padding-top: $menu-font-padding-top;
+            display: block;
+            text-decoration: none;
+            font-size: $menu-font-size;
+            color: black;
+            height: $menu-height - $menu-font-padding-top;
+            border-bottom: 2px solid transparent;
+            // padding: 5px 0;
+            &:hover {
+              color: $menu-font-color-hover;
+              border-bottom: 2px solid $menu-border-bottom-color-hover;
+            }
+          }
+        }
+      }
+    }
+    div {
+      height: $menu-height ;
+    }
+  }
+
+  main {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: whitesmoke;
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      margin: 2rem 0 1rem 0;
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
+
+  footer {
+    padding-top: 1rem;
+    background-color: $primary-color;
+    .footer-content {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .copyright {
+      text-align: center;
+      font-weight: bold;
+      padding: 2rem 0;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+}
+
+@mixin custom-btn($btn-font-color: $font-color-white, $btn-bg-color: $primary-color, $btn-bg-color-2: $primary-color-2) {
+  button {
+    margin: 20px;
+    // width: 130px;
+    // height: 40px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+      4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    background: linear-gradient(0deg, $btn-bg-color 0%, $btn-bg-color-2 100%);
+    color: $btn-font-color;
+    overflow: hidden;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      top: -180px;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-btn1 3s ease-in-out infinite;
+    }
+
+    // &:active {
+    //   box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    //     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+    // }
+  }
+}
+@-webkit-keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
