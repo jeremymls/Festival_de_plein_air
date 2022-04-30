@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, sans-serif;
+  color: #282623;
+}
+
+body {
+  background-image: url("../assets/fond.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+body header nav {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  height: 80px;
+}
+body header nav ul {
+  list-style-type: none;
+}
+body header nav ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body header nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+body header nav ul li.active a {
+  color: #fbcd4b;
+  border-bottom: 2px solid #ffd700;
+}
+body header nav ul li a {
+  padding-top: 20px;
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  height: 60px;
+  border-bottom: 2px solid transparent;
+}
+body header nav ul li a:hover {
+  color: #88a550;
+  border-bottom: 2px solid #86c40b;
+}
+body header div {
+  height: 80px;
+}
+body main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: whitesmoke;
+}
+body main h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+body main h2 {
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+  text-decoration: underline;
+}
+body footer {
+  padding-top: 1rem;
+  background-color: #fbcd4b;
+}
+body footer .footer-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+body footer .copyright {
+  text-align: center;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+}
+
+@-webkit-keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+.intro {
+  font-size: 1.3rem;
+  background: #fafafa;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25);
+}
+.intro p {
+  margin: 0.5rem 0;
+}
+.intro div {
+  text-align: center;
+}
+.intro div button {
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+  background: linear-gradient(0deg, #fbcd4b 0%, #ffd700 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.intro div button:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+.intro div button:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  -webkit-animation: shiny-btn1 3s ease-in-out infinite;
+          animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.affiche .card {
+  width: 23%;
+  padding: 5px 5px 20px 5px;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 10px;
+  position: relative;
+}
+.affiche .card img {
+  width: 100%;
+  max-height: 340px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.affiche .card .title {
+  height: 5rem;
+  font-size: 1.4rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.affiche .card .date {
+  position: absolute;
+  border-top-left-radius: 10px;
+  top: 0;
+  left: 0;
+  background-color: red;
+  color: white;
+  padding: 0.8em 0.3em;
+}
+.affiche .card .date span {
+  display: block;
+  text-align: center;
+  color: white;
+}
+.affiche .card .date .day {
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+}
+.affiche .card .date .month {
+  text-transform: uppercase;
+}
+.affiche .card .date .month,
+.affiche .card .date .year {
+  font-size: 12px;
+}
+.affiche .card .author {
+  text-align: center;
+  height: 3rem;
+  margin-top: 0.5rem;
+}
+.affiche .card .desc {
+  text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=index.css.map */
