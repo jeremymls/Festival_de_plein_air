@@ -6,7 +6,11 @@
 }
 
 body {
-  background-color: #282623;
+  background-image: url("../assets/fond.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 body header nav {
   width: 100%;
