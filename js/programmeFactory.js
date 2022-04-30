@@ -1,38 +1,56 @@
 // DOM
 const programme = document.getElementById("programme");
+const movieList = document.getElementById("movieList");
+let html = ``;
+
+programmation.forEach((jour) => {
+  jour.films.forEach((film, index) => {
+    html += `
+    <tr>
+      <td>${index ? "" : jour.date} </td>
+      <td>${film.heure} </td>
+      <td>
+        <img src="assets/${film.img}" alt="">
+        <p>${film.titre}</p>
+      </td>
+      <td>${film.duration}</td>
+    </tr>`;
+  });
+});
+
+movieList.innerHTML = html;
 
 function init(nav) {
-  let html = `<div class="nav">`;
+  htmlBtn = `<div class="nav">`;
   programmation.forEach((programme, index) => {
-    html += `<button ${index==nav ? 'class="btn-selected"':""} id=nav-${index} >${programme.date}</button>`;
+    htmlBtn += `<button ${index == nav ? 'class="btn-selected"' : ""} class="nav-${index}" >${programme.date}</button>`;
   });
 
-  html += `
+  html = `
   </div>
   <div class="list">`;
   programmation[nav].films.forEach((film, index) => {
-    html += `
-<div class="card row">
-  <div class="heure">${film.heure}</div>
-  <img src="assets/${film.img}" alt="">
-  <div class="card-content">
-    <p class="author">Un films de <strong>${film.auteur}</strong> <span class="duration">durée: ${film.duration}</span></p>
-    <p class="description">${film.description}</p>
-  </div>
-  <div class="card-right">
-    <button>Réserver</button>
-  </div>
-</div>
-`;
+      html += `
+      <div class="card row">
+        <div class="heure">${film.heure}</div>
+        <img src="assets/${film.img}" alt="">
+        <div class="card-content">
+          <h3>${film.titre}</h3>
+          <p class="author">Un films de <strong>${film.auteur}</strong> <span class="duration">durée: ${film.duration}</span></p>
+          <p class="description">${film.description}</p>
+        </div>
+        <div class="card-right">
+          <button>Réserver</button>
+        </div>
+      </div>`;
   });
   html += `</div>`;
 
-  programme.innerHTML = html;
+  programme.innerHTML = htmlBtn + html + htmlBtn;
 
   document.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", (event) => {
-      console.log(event.target.id.split("-")[1]);
-      init(event.target.id.split("-")[1]);
+      init(event.target.classList.value.split("-")[1]);
     });
   });
 }
