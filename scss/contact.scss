@@ -1,1 +1,30 @@
 @import "styles.scss";
+
+.infos {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: $secondary-color;
+    width: 40%;
+    font-size: 1.6rem;
+    li{
+        padding: 2rem 0;
+        list-style: none;
+        span{
+            font-size: 1.2rem;
+            color: rgb(100, 100, 100);
+        }
+    }
+    .reseaux{
+        i{
+            font-size: 30px;
+            color: $primary-color;
+        }
+        text-align: center;
+    }
+}
+
+.partenaires{
+    img{
+        width: 50%;
+    }
+}
