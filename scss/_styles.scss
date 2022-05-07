@@ -20,7 +20,7 @@ $menu-font-padding-top: 20px;
 $menu-font-size: 2rem;
 $menu-font-color: $primary-color;
 $menu-border-bottom-color: $primary-color-2;
-$menu-font-color-hover: $secondary-color;
+$menu-font-color-hover: $secondary-color-2;
 $menu-border-bottom-color-hover: $secondary-color-2;
 
 body {
@@ -33,11 +33,14 @@ body {
   header {
     nav {
       width: 100%;
-      background-color: white;
       position: fixed;
       top: 0px;
       z-index: 1;
       height: $menu-height;
+      @media screen and (max-width: 576px) {
+        position: relative;
+        height: auto;
+      }
       ul {
         list-style-type: none;
         &:after {
@@ -46,9 +49,14 @@ body {
           clear: both;
         }
         li {
+          background-color: $secondary-color;
           float: left;
-          width: 25%;
+          width: 20%;
           text-align: center;
+          @media screen and (max-width: 576px) {
+            width: 100%;
+            float: none;
+          }
           &.active {
             a {
               color: $menu-font-color;
@@ -64,6 +72,13 @@ body {
             height: $menu-height - $menu-font-padding-top;
             border-bottom: 2px solid transparent;
             // padding: 5px 0;
+            @media screen and (max-width: 576px) {
+              height:  100%;
+              padding: 5px ;
+              font-size: 1.2rem;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+            }
             &:hover {
               color: $menu-font-color-hover;
               border-bottom: 2px solid $menu-border-bottom-color-hover;
@@ -74,22 +89,52 @@ body {
     }
     div {
       height: $menu-height ;
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
     }
   }
 
   main {
     max-width: 1140px;
+    min-height: 100vh;
     margin: 0 auto;
     padding: 30px 20px;
     background-color: whitesmoke;
+
+    @media screen and (min-width: 992px) and (max-width: 1140px) {
+      max-width: 950px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      max-width: 750px;
+    }
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+      width: 500px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 90%;
+    }
+    
+    h1,h2 {
+      color: $primary-color;
+    }
     h1 {
       text-align: center;
       margin-bottom: 1.5rem;
+      font-size: 40px;
     }
     h2 {
       margin: 2rem 0 1rem 0;
       text-align: center;
       text-decoration: underline;
+      font-size: 30px;
+    }
+    h3 {
+      margin: 2rem 0 1rem 0;
+      font-size: 20px;
+    }
+    p{
+      font-size: 16px;
     }
   }
 
@@ -115,6 +160,9 @@ body {
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
+}
+.txtcenter {
+  text-align: center;
 }
 
 @mixin custom-btn($btn-font-color: $font-color-white, $btn-bg-color: $primary-color, $btn-bg-color-2: $primary-color-2) {
@@ -174,3 +222,4 @@ body {
     opacity: 0;
   }
 }
+

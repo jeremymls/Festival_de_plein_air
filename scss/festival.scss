@@ -1,1 +1,19 @@
 @import "styles.scss";
+
+.acces{
+    display: flex;
+    align-items: center;
+    img {
+        width: 3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.services{
+    div {
+        width: 40%;
+        img{
+            width: 3rem;
+        }
+    }
+}

@@ -14,11 +14,16 @@ body {
 }
 body header nav {
   width: 100%;
-  background-color: white;
   position: fixed;
   top: 0px;
   z-index: 1;
   height: 80px;
+}
+@media screen and (max-width: 576px) {
+  body header nav {
+    position: relative;
+    height: auto;
+  }
 }
 body header nav ul {
   list-style-type: none;
@@ -29,9 +34,16 @@ body header nav ul:after {
   clear: both;
 }
 body header nav ul li {
+  background-color: #88a550;
   float: left;
-  width: 25%;
+  width: 20%;
   text-align: center;
+}
+@media screen and (max-width: 576px) {
+  body header nav ul li {
+    width: 100%;
+    float: none;
+  }
 }
 body header nav ul li.active a {
   color: #fbcd4b;
@@ -46,27 +58,74 @@ body header nav ul li a {
   height: 60px;
   border-bottom: 2px solid transparent;
 }
+@media screen and (max-width: 576px) {
+  body header nav ul li a {
+    height: 100%;
+    padding: 5px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+}
 body header nav ul li a:hover {
-  color: #88a550;
+  color: #86c40b;
   border-bottom: 2px solid #86c40b;
 }
 body header div {
   height: 80px;
 }
+@media screen and (max-width: 576px) {
+  body header div {
+    display: none;
+  }
+}
 body main {
   max-width: 1140px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 30px 20px;
   background-color: whitesmoke;
 }
+@media screen and (min-width: 992px) and (max-width: 1140px) {
+  body main {
+    max-width: 950px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body main {
+    max-width: 750px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 576px) {
+  body main {
+    width: 90%;
+  }
+}
+body main h1, body main h2 {
+  color: #fbcd4b;
+}
 body main h1 {
   text-align: center;
   margin-bottom: 1.5rem;
+  font-size: 40px;
 }
 body main h2 {
   margin: 2rem 0 1rem 0;
   text-align: center;
   text-decoration: underline;
+  font-size: 30px;
+}
+body main h3 {
+  margin: 2rem 0 1rem 0;
+  font-size: 20px;
+}
+body main p {
+  font-size: 16px;
 }
 body footer {
   padding-top: 1rem;
@@ -89,6 +148,10 @@ body footer .copyright {
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
+}
+
+.txtcenter {
+  text-align: center;
 }
 
 @-webkit-keyframes shiny-btn1 {
@@ -129,14 +192,15 @@ body footer .copyright {
   }
 }
 .intro {
-  font-size: 1.3rem;
   background: #fafafa;
   padding: 1em;
   border-radius: 0.5em;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25);
 }
 .intro p {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  text-align: center;
 }
 .intro div {
   text-align: center;
@@ -237,4 +301,31 @@ body footer .copyright {
   display: -webkit-box;
   -webkit-line-clamp: 6;
   margin-bottom: 1rem;
+}
+
+.cookie-box {
+  font-size: 1.5rem;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  text-align: center;
+  padding: 1.6rem 2rem;
+  background: #fbcd4b;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.cookie-box--hide {
+  opacity: 0;
+  top: -50%;
+}
+
+.cookie-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem 0.85rem;
+  margin-left: 0.45rem;
+  color: #fff;
+  letter-spacing: 1px;
+  background-image: linear-gradient(62deg, #88a550 0%, #86c40b 100%);
 }/*# sourceMappingURL=index.css.map */

@@ -191,29 +191,49 @@ body footer .copyright {
     opacity: 0;
   }
 }
-.infos {
+.reseaux {
   text-align: center;
-  padding: 1rem 0;
-  background-color: #88a550;
-  width: 40%;
-  font-size: 1.6rem;
+  margin: auto;
+  box-shadow: 0 0 10px #fbcd4b;
+  width: 15rem;
+  border-radius: 10px;
+  background-color: #fbcd4b;
 }
-.infos li {
-  padding: 2rem 0;
-  list-style: none;
+.reseaux h3 {
+  color: #fff;
+  padding-top: 0.8rem;
 }
-.infos li span {
-  font-size: 1.2rem;
-  color: rgb(100, 100, 100);
-}
-.infos .reseaux {
-  text-align: center;
-}
-.infos .reseaux i {
-  font-size: 30px;
-  color: #fbcd4b;
+.reseaux i {
+  color: white;
+  font-size: 2em;
+  margin: 0.5em;
 }
 
-.partenaires img {
-  width: 50%;
-}/*# sourceMappingURL=contact.css.map */
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 80%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  background-color: #fff;
+}
+.card .titre {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.card img {
+  width: 60%;
+  height: auto;
+}
+.card .date {
+  margin: 1rem 0;
+}
+.card .contenu {
+  text-align: justify;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=actualites.css.map */

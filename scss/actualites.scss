@@ -1,0 +1,50 @@
+@import "styles.scss";
+
+.reseaux {
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 0 10px $primary-color;
+    width: 15rem;
+    border-radius: 10px;
+    background-color: $primary-color;
+    h3{
+        color: $font-color-white;
+        padding-top: .8rem;
+    }
+    i{
+        color: white;
+        font-size: 2em;
+        margin: 0.5em;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 80%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    background-color: #fff;
+    .titre{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+    img{
+        width: 60%;
+        height: auto;
+    }
+    .date{
+        margin: 1rem 0;
+
+    }
+    .contenu{
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+}
+
