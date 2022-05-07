@@ -301,4 +301,31 @@ body footer .copyright {
   display: -webkit-box;
   -webkit-line-clamp: 6;
   margin-bottom: 1rem;
+}
+
+.cookie-box {
+  font-size: 1.5rem;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  text-align: center;
+  padding: 1.6rem 2rem;
+  background: #fbcd4b;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.cookie-box--hide {
+  opacity: 0;
+  top: -50%;
+}
+
+.cookie-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem 0.85rem;
+  margin-left: 0.45rem;
+  color: #fff;
+  letter-spacing: 1px;
+  background-image: linear-gradient(62deg, #88a550 0%, #86c40b 100%);
 }/*# sourceMappingURL=index.css.map */
