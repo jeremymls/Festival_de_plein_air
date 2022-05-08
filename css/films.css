@@ -115,11 +115,21 @@ body main h1 {
   margin-bottom: 1.5rem;
   font-size: 40px;
 }
+@media screen and (max-width: 576px) {
+  body main h1 {
+    font-size: 30px;
+  }
+}
 body main h2 {
   margin: 2rem 0 1rem 0;
   text-align: center;
   text-decoration: underline;
   font-size: 30px;
+}
+@media screen and (max-width: 576px) {
+  body main h2 {
+    font-size: 25px;
+  }
 }
 body main h3 {
   margin: 2rem 0 1rem 0;
@@ -138,10 +148,26 @@ body footer .footer-content {
   align-items: center;
   justify-content: space-around;
 }
+body footer .footer-content > div {
+  width: 300px;
+  margin: 1rem 0;
+}
+body footer .footer-content .footer_reseau {
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  body footer .footer-content .footer_reseau {
+    text-align: left;
+  }
+}
+body footer .footer-content .footer_reseau i {
+  font-size: 30px;
+  margin-right: 1rem;
+}
 body footer .copyright {
   text-align: center;
   font-weight: bold;
-  padding: 2rem 0;
+  padding: 0 0 1.5rem 0;
 }
 
 .row {
@@ -149,6 +175,11 @@ body footer .copyright {
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
+}
+@media screen and (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
 }
 
 .txtcenter {
@@ -198,6 +229,11 @@ table {
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25);
   border-radius: 0.5em;
 }
+@media screen and (max-width: 576px) {
+  table {
+    font-size: 16px;
+  }
+}
 table thead tr th {
   background-color: #fbcd4b;
   color: #fff;
@@ -245,6 +281,13 @@ table tbody tr td:not(:nth-child(3)) {
   color: #fff;
   overflow: hidden;
 }
+@media screen and (max-width: 576px) {
+  #programme .nav button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 1rem 5px;
+  }
+}
 #programme .nav button:hover {
   text-decoration: none;
   opacity: 0.7;
@@ -267,6 +310,11 @@ table tbody tr td:not(:nth-child(3)) {
 #programme .list {
   padding: 2rem;
 }
+@media screen and (max-width: 576px) {
+  #programme .list {
+    padding: 0;
+  }
+}
 #programme .list .card {
   display: flex;
   position: relative;
@@ -275,6 +323,11 @@ table tbody tr td:not(:nth-child(3)) {
   border-radius: 1rem;
   margin-bottom: 5rem;
   padding: 2rem;
+}
+@media screen and (max-width: 576px) {
+  #programme .list .card {
+    padding: 1rem;
+  }
 }
 #programme .list .card .heure {
   font-size: 1.5rem;
@@ -301,6 +354,11 @@ table tbody tr td:not(:nth-child(3)) {
   width: 50%;
   height: auto;
 }
+@media screen and (max-width: 576px) {
+  #programme .list .card .card-content {
+    width: 100%;
+  }
+}
 #programme .list .card .card-content h3 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -314,15 +372,33 @@ table tbody tr td:not(:nth-child(3)) {
   color: #a3a599;
   margin: 1rem 0;
 }
+#programme .list .card .card-content .author > span {
+  color: #a3a599;
+}
+@media screen and (max-width: 576px) {
+  #programme .list .card .card-content .author {
+    flex-direction: column;
+  }
+}
 #programme .list .card .card-content .author strong {
   margin-left: 0.5rem;
   color: #282623;
 }
 #programme .list .card .card-content .author .duration {
   margin-left: auto;
+  text-align: right;
   font-size: 1.2rem;
   font-weight: bold;
   color: #a3a599;
+  min-width: 150px;
+}
+@media screen and (max-width: 576px) {
+  #programme .list .card .card-content .author .duration {
+    margin-left: 0;
+    text-align: left;
+    margin-top: 1rem;
+    color: #282623;
+  }
 }
 #programme .list .card .card-content .description {
   font-size: 1.2rem;
@@ -334,6 +410,11 @@ table tbody tr td:not(:nth-child(3)) {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 576px) {
+  #programme .list .card .card-right {
+    width: 100%;
+  }
 }
 #programme .list .card .card-right button {
   padding: 0.5rem;
@@ -361,6 +442,13 @@ table tbody tr td:not(:nth-child(3)) {
   background: linear-gradient(0deg, #0f0 0%, #0f0 100%);
   color: #000;
   overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  #programme .list .card .card-right button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 1rem 5px;
+  }
 }
 #programme .list .card .card-right button:hover {
   text-decoration: none;

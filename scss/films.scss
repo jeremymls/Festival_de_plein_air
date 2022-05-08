@@ -9,6 +9,9 @@ table {
   width: 100%;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25);
   border-radius: 0.5em;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  }
   thead {
     tr {
       th {
@@ -55,6 +58,9 @@ table {
   }
   .list {
     padding: 2rem;
+    @media screen and (max-width: 576px) {
+      padding: 0;
+    }
     .card {
       display: flex;
       position: relative;
@@ -63,6 +69,9 @@ table {
       border-radius: 1rem;
       margin-bottom: 5rem;
       padding: 2rem;
+      @media screen and (max-width: 576px) {
+        padding: 1rem;
+      }
       .heure {
         font-size: 1.5rem;
         font-weight: bold;
@@ -89,6 +98,9 @@ table {
         // justify-content: center;
         width: 50%;
         height: auto;
+        @media screen and (max-width: 576px) {
+          width: 100%;
+        }
         h3 {
           font-size: 1.5rem;
           font-weight: bold;
@@ -101,15 +113,29 @@ table {
           font-weight: bold;
           color: $font-color-2;
           margin: 1rem 0;
+          > span{
+            color: $font-color-2;
+          }
+          @media screen and (max-width: 576px) {
+            flex-direction: column;
+          }
           strong {
             margin-left: 0.5rem;
             color: $font-color;
           }
           .duration {
             margin-left: auto;
+            text-align: right;
             font-size: 1.2rem;
             font-weight: bold;
             color: $font-color-2;
+            min-width: 150px;
+            @media screen and (max-width: 576px) {
+              margin-left: 0;
+              text-align: left;
+              margin-top: 1rem;
+              color: $font-color;
+            }
           }
         }
         .description {
@@ -124,6 +150,9 @@ table {
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width: 576px) {
+          width: 100%;
+        }
         button {
           padding: 0.5rem;
           border-radius: 1rem;

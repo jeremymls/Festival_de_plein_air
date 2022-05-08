@@ -115,11 +115,21 @@ body main h1 {
   margin-bottom: 1.5rem;
   font-size: 40px;
 }
+@media screen and (max-width: 576px) {
+  body main h1 {
+    font-size: 30px;
+  }
+}
 body main h2 {
   margin: 2rem 0 1rem 0;
   text-align: center;
   text-decoration: underline;
   font-size: 30px;
+}
+@media screen and (max-width: 576px) {
+  body main h2 {
+    font-size: 25px;
+  }
 }
 body main h3 {
   margin: 2rem 0 1rem 0;
@@ -138,10 +148,26 @@ body footer .footer-content {
   align-items: center;
   justify-content: space-around;
 }
+body footer .footer-content > div {
+  width: 300px;
+  margin: 1rem 0;
+}
+body footer .footer-content .footer_reseau {
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  body footer .footer-content .footer_reseau {
+    text-align: left;
+  }
+}
+body footer .footer-content .footer_reseau i {
+  font-size: 30px;
+  margin-right: 1rem;
+}
 body footer .copyright {
   text-align: center;
   font-weight: bold;
-  padding: 2rem 0;
+  padding: 0 0 1.5rem 0;
 }
 
 .row {
@@ -149,6 +175,11 @@ body footer .copyright {
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
+}
+@media screen and (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
 }
 
 .txtcenter {
@@ -199,6 +230,12 @@ body footer .copyright {
   width: 40%;
   font-size: 1.6rem;
 }
+@media screen and (max-width: 576px) {
+  .infos {
+    width: 90%;
+    margin: auto;
+  }
+}
 .infos li {
   padding: 2rem 0;
   list-style: none;
@@ -215,6 +252,15 @@ body footer .copyright {
   color: #fbcd4b;
 }
 
+@media screen and (max-width: 576px) {
+  iframe {
+    width: 90%;
+    height: 50vh;
+    margin: auto;
+  }
+}
+
 .partenaires img {
   width: 50%;
+  margin: auto;
 }/*# sourceMappingURL=contact.css.map */

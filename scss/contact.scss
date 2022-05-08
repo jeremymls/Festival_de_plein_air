@@ -6,6 +6,10 @@
     background-color: $secondary-color;
     width: 40%;
     font-size: 1.6rem;
+    @media screen and (max-width: 576px) {
+        width: 90%;
+        margin: auto;
+    }
     li{
         padding: 2rem 0;
         list-style: none;
@@ -23,8 +27,17 @@
     }
 }
 
+iframe{
+    @media screen and (max-width: 576px) {
+        width: 90%;
+        height: 50vh;
+        margin: auto;
+    }
+}
+
 .partenaires{
     img{
         width: 50%;
+        margin: auto;
     }
 }
