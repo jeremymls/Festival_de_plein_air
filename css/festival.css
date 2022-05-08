@@ -67,6 +67,13 @@ body header nav ul li a {
     text-transform: uppercase;
   }
 }
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  body header nav ul li a {
+    font-size: 1.35rem;
+    height: auto;
+    padding: 5px 0;
+  }
+}
 body header nav ul li a:hover {
   color: #86c40b;
   border-bottom: 2px solid #86c40b;
@@ -77,6 +84,11 @@ body header div {
 @media screen and (max-width: 576px) {
   body header div {
     display: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  body header div {
+    height: 3rem;
   }
 }
 body main {
@@ -108,17 +120,28 @@ body main {
 }
 body main h1, body main h2 {
   color: #fbcd4b;
+  text-shadow: 2px 2px 2px #88a550;
 }
 body main h1 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 40px;
 }
+@media screen and (max-width: 576px) {
+  body main h1 {
+    font-size: 30px;
+  }
+}
 body main h2 {
   margin: 2rem 0 1rem 0;
   text-align: center;
   text-decoration: underline;
   font-size: 30px;
+}
+@media screen and (max-width: 576px) {
+  body main h2 {
+    font-size: 25px;
+  }
 }
 body main h3 {
   margin: 2rem 0 1rem 0;
@@ -137,10 +160,26 @@ body footer .footer-content {
   align-items: center;
   justify-content: space-around;
 }
+body footer .footer-content > div {
+  width: 300px;
+  margin: 1rem 0;
+}
+body footer .footer-content .footer_reseau {
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  body footer .footer-content .footer_reseau {
+    text-align: left;
+  }
+}
+body footer .footer-content .footer_reseau i {
+  font-size: 30px;
+  margin-right: 1rem;
+}
 body footer .copyright {
   text-align: center;
   font-weight: bold;
-  padding: 2rem 0;
+  padding: 0 0 1.5rem 0;
 }
 
 .row {
@@ -148,6 +187,11 @@ body footer .copyright {
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
 }
 
 .txtcenter {
@@ -191,17 +235,44 @@ body footer .copyright {
     opacity: 0;
   }
 }
+@media screen and (max-width: 991px) {
+  iframe {
+    margin-top: 1rem;
+    box-shadow: 0px 0px 5px 5px #88a550;
+    border-radius: 5px;
+    height: 50vh;
+  }
+}
+
 .acces {
   display: flex;
   align-items: center;
 }
-.acces img {
+.acces > div {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px 5px 3px #88a550;
+  border-radius: 5px;
+}
+.acces > div:hover {
+  box-shadow: 0px 0px 10px 5px #fbcd4b;
+}
+.acces > div h3 {
+  margin-top: 0;
+}
+.acces > div img {
   width: 3rem;
   margin-bottom: 1rem;
 }
 
 .services div {
   width: 40%;
+  margin: 2rem auto;
+}
+@media screen and (max-width: 576px) {
+  .services div {
+    width: 90%;
+  }
 }
 .services div img {
   width: 3rem;

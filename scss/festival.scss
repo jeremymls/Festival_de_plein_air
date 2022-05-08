@@ -1,17 +1,42 @@
 @import "styles.scss";
 
+iframe{
+    @media screen and (max-width: 991px) {
+        margin-top: 1rem;
+        box-shadow: 0px 0px 5px 5px $secondary-color;
+        border-radius: 5px;
+        height: 50vh;
+    }
+}
+
 .acces{
     display: flex;
     align-items: center;
-    img {
-        width: 3rem;
+    > div {
+        padding: 1rem;
         margin-bottom: 1rem;
+        box-shadow: 0px 0px 5px 3px $secondary-color;
+        border-radius: 5px;
+        &:hover {
+            box-shadow: 0px 0px 10px 5px $primary-color;
+        }
+        h3{
+            margin-top: 0;
+        }
+        img {
+            width: 3rem;
+            margin-bottom: 1rem;
+        }
     }
 }
 
 .services{
     div {
         width: 40%;
+        margin: 2rem auto;
+        @media screen and (max-width: 576px) {
+            width: 90%;
+        }
         img{
             width: 3rem;
         }

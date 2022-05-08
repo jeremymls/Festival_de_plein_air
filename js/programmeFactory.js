@@ -36,7 +36,7 @@ function init(nav) {
         <img src="assets/${film.img}" alt="">
         <div class="card-content">
           <h3>${film.titre}</h3>
-          <p class="author">Un films de <strong>${film.auteur}</strong> <span class="duration">durée: ${film.duration}</span></p>
+          <p class="author"><span>Un films de<strong>${film.auteur}</strong></span> <span class="duration">Durée: ${film.duration}</span></p>
           <p class="description">${film.description}</p>
         </div>
         <div class="card-right">

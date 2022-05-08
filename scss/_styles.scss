@@ -79,6 +79,11 @@ body {
               letter-spacing: 3px;
               text-transform: uppercase;
             }
+            @media screen and (min-width: 576px) and (max-width: 991px) {
+              font-size: 1.35rem;
+              height: auto;
+              padding: 5px 0;
+            }
             &:hover {
               color: $menu-font-color-hover;
               border-bottom: 2px solid $menu-border-bottom-color-hover;
@@ -91,6 +96,9 @@ body {
       height: $menu-height ;
       @media screen and (max-width: 576px) {
         display: none;
+      }
+      @media screen and (min-width: 576px) and (max-width: 991px) {
+        height: 3rem;
       }
     }
   }
@@ -117,17 +125,24 @@ body {
     
     h1,h2 {
       color: $primary-color;
+      text-shadow: 2px 2px 2px $secondary-color;
     }
     h1 {
       text-align: center;
       margin-bottom: 1.5rem;
       font-size: 40px;
+      @media screen and (max-width: 576px) {
+        font-size: 30px;
+      }
     }
     h2 {
       margin: 2rem 0 1rem 0;
       text-align: center;
       text-decoration: underline;
       font-size: 30px;
+      @media screen and (max-width: 576px) {
+        font-size: 25px;
+      }
     }
     h3 {
       margin: 2rem 0 1rem 0;
@@ -146,11 +161,25 @@ body {
       width: 100%;
       align-items: center;
       justify-content: space-around;
+      > div {
+        width: 300px;
+        margin: 1rem 0;
+      }
+      .footer_reseau{
+        text-align: center;
+        @media screen and (max-width: 576px) {
+          text-align: left;
+        }
+        i{
+          font-size: 30px;
+          margin-right: 1rem;
+        }
+      }
     }
     .copyright {
       text-align: center;
       font-weight: bold;
-      padding: 2rem 0;
+      padding:0 0 1.5rem 0;
     }
   }
 }
@@ -160,6 +189,9 @@ body {
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 .txtcenter {
   text-align: center;
@@ -186,7 +218,11 @@ body {
     background: linear-gradient(0deg, $btn-bg-color 0%, $btn-bg-color-2 100%);
     color: $btn-font-color;
     overflow: hidden;
-
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      padding: 5px 10px;
+      margin: 1rem 5px;
+    }
     &:hover {
       text-decoration: none;
       opacity: 0.7;
