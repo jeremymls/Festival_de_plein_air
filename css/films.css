@@ -67,6 +67,13 @@ body header nav ul li a {
     text-transform: uppercase;
   }
 }
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  body header nav ul li a {
+    font-size: 1.35rem;
+    height: auto;
+    padding: 5px 0;
+  }
+}
 body header nav ul li a:hover {
   color: #86c40b;
   border-bottom: 2px solid #86c40b;
@@ -77,6 +84,11 @@ body header div {
 @media screen and (max-width: 576px) {
   body header div {
     display: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  body header div {
+    height: 3rem;
   }
 }
 body main {
@@ -176,7 +188,7 @@ body footer .copyright {
   justify-content: space-around;
   margin: auto;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .row {
     flex-direction: column;
   }
@@ -229,7 +241,7 @@ table {
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25);
   border-radius: 0.5em;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   table {
     font-size: 16px;
   }
@@ -281,7 +293,7 @@ table tbody tr td:not(:nth-child(3)) {
   color: #fff;
   overflow: hidden;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #programme .nav button {
     font-size: 16px;
     padding: 5px 10px;
@@ -310,9 +322,14 @@ table tbody tr td:not(:nth-child(3)) {
 #programme .list {
   padding: 2rem;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991px) {
   #programme .list {
     padding: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  #programme .list .row {
+    flex-direction: column;
   }
 }
 #programme .list .card {
@@ -324,7 +341,7 @@ table tbody tr td:not(:nth-child(3)) {
   margin-bottom: 5rem;
   padding: 2rem;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991px) {
   #programme .list .card {
     padding: 1rem;
   }
@@ -354,7 +371,7 @@ table tbody tr td:not(:nth-child(3)) {
   width: 50%;
   height: auto;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991px) {
   #programme .list .card .card-content {
     width: 100%;
   }
@@ -375,7 +392,7 @@ table tbody tr td:not(:nth-child(3)) {
 #programme .list .card .card-content .author > span {
   color: #a3a599;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991px) {
   #programme .list .card .card-content .author {
     flex-direction: column;
   }
@@ -392,7 +409,7 @@ table tbody tr td:not(:nth-child(3)) {
   color: #a3a599;
   min-width: 150px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991px) {
   #programme .list .card .card-content .author .duration {
     margin-left: 0;
     text-align: left;
@@ -411,7 +428,7 @@ table tbody tr td:not(:nth-child(3)) {
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991px) {
   #programme .list .card .card-right {
     width: 100%;
   }
@@ -443,7 +460,7 @@ table tbody tr td:not(:nth-child(3)) {
   color: #000;
   overflow: hidden;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #programme .list .card .card-right button {
     font-size: 16px;
     padding: 5px 10px;

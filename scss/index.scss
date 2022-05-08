@@ -20,7 +20,7 @@
 }
 
 .affiche {
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 991px) {
     display: flex;
     flex-direction: column;
   }
@@ -30,7 +30,7 @@
     box-shadow: 0px 0px 5px black;
     border-radius: 10px;
     position: relative;
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 991px) {
       margin: 1rem auto;
       width: 90%;
     }

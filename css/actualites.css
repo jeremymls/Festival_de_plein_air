@@ -67,6 +67,13 @@ body header nav ul li a {
     text-transform: uppercase;
   }
 }
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  body header nav ul li a {
+    font-size: 1.35rem;
+    height: auto;
+    padding: 5px 0;
+  }
+}
 body header nav ul li a:hover {
   color: #86c40b;
   border-bottom: 2px solid #86c40b;
@@ -77,6 +84,11 @@ body header div {
 @media screen and (max-width: 576px) {
   body header div {
     display: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  body header div {
+    height: 3rem;
   }
 }
 body main {
@@ -176,7 +188,7 @@ body footer .copyright {
   justify-content: space-around;
   margin: auto;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .row {
     flex-direction: column;
   }
