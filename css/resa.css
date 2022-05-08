@@ -108,6 +108,7 @@ body main {
 }
 body main h1, body main h2 {
   color: #fbcd4b;
+  text-shadow: 2px 2px 2px #88a550;
 }
 body main h1 {
   text-align: center;
