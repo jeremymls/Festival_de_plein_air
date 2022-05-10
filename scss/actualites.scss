@@ -33,10 +33,16 @@
         font-size: 2rem;
         margin-bottom: 1rem;
         font-weight: bold;
+        @media screen and (max-width: 768px) {
+            font-size: 1.3rem;
+        }
     }
     img{
         width: 60%;
         height: auto;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
     .date{
         margin: 1rem 0;
@@ -45,6 +51,9 @@
     .contenu{
         text-align: justify;
         font-size: 1.2rem;
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+        }
     }
 }
 

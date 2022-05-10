@@ -270,9 +270,19 @@ body footer .copyright {
   margin-bottom: 1rem;
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  .card .titre {
+    font-size: 1.3rem;
+  }
+}
 .card img {
   width: 60%;
   height: auto;
+}
+@media screen and (max-width: 768px) {
+  .card img {
+    width: 100%;
+  }
 }
 .card .date {
   margin: 1rem 0;
@@ -280,4 +290,9 @@ body footer .copyright {
 .card .contenu {
   text-align: justify;
   font-size: 1.2rem;
+}
+@media screen and (max-width: 768px) {
+  .card .contenu {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=actualites.css.map */
