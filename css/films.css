@@ -279,6 +279,9 @@ table tbody tr td:not(:nth-child(3)) {
   text-align: center;
 }
 
+#programme {
+  padding-top: 5rem;
+}
 #programme .nav {
   display: flex;
   justify-content: center;
