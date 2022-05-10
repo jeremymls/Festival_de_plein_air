@@ -1,44 +1,59 @@
 @import "styles.scss";
 
-iframe{
-    @media screen and (max-width: 991px) {
+main {
+  .banner {
+    img {
+      width: 60%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    iframe {
+      width: 40%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
         margin-top: 1rem;
         box-shadow: 0px 0px 5px 5px $secondary-color;
         border-radius: 5px;
         height: 50vh;
+      }
     }
-}
-
-.acces{
+  }
+  .acces {
     display: flex;
     align-items: center;
     > div {
-        padding: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0px 0px 5px 3px $secondary-color;
+      border-radius: 5px;
+      &:hover {
+        box-shadow: 0px 0px 10px 5px $primary-color;
+      }
+      h3 {
+        margin-top: 0;
+      }
+      img {
+        width: 3rem;
         margin-bottom: 1rem;
-        box-shadow: 0px 0px 5px 3px $secondary-color;
-        border-radius: 5px;
-        &:hover {
-            box-shadow: 0px 0px 10px 5px $primary-color;
-        }
-        h3{
-            margin-top: 0;
-        }
-        img {
-            width: 3rem;
-            margin-bottom: 1rem;
-        }
+      }
     }
-}
+  }
 
-.services{
+  .services {
     div {
-        width: 40%;
-        margin: 2rem auto;
-        @media screen and (max-width: 576px) {
-            width: 90%;
-        }
-        img{
-            width: 3rem;
-        }
+      width: 40%;
+      margin: 2rem auto;
+      @media screen and (max-width: 576px) {
+        width: 90%;
+      }
+      img {
+        width: 3rem;
+      }
     }
+  }
+
+  li {
+    margin-left: 2rem;
+  }
 }
