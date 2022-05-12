@@ -12,6 +12,7 @@ programmation.forEach((jour) => {
       <td>
         <img src="assets/${film.img}" alt="">
         <p>${film.titre}</p>
+        <a href="films.html#programme"><i class="bi bi-eye"></i></a>
       </td>
       <td>${film.duration}</td>
     </tr>`;
@@ -40,7 +41,7 @@ function init(nav) {
           <p class="description">${film.description}</p>
         </div>
         <div class="card-right">
-          <button>Réserver</button>
+          <button>S'inscrire</button>
         </div>
       </div>`;
   });
