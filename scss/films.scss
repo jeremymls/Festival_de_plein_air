@@ -10,7 +10,7 @@ table {
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25);
   border-radius: 0.5em;
   @media screen and (max-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
   }
   thead {
     tr {
@@ -38,6 +38,18 @@ table {
           aspect-ratio: 3/4;
           object-fit: contain;
           margin-right: 1rem;
+        }
+        p{
+          font-size: 1.4rem;
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
+        a{
+          margin-left: auto;
+          font-size: 1.6rem;
+          cursor: pointer;
+          text-decoration: none;
         }
       }
       td:not(:nth-child(3)) {
@@ -173,23 +185,3 @@ table {
     }
   }
 }
-
-// .heure {
-//   font-size: 1.5rem;
-//   font-weight: bold;
-//   background-color: black;
-//   color: #0f0;
-//   border-radius: 1rem;
-//   padding: 0.5rem;
-//   position: absolute;
-//   top: 10px;
-//   right: 10px;
-// }
-
-// .right-col {
-//   position: relative;
-// }
-
-// .card-body {
-//   min-height: 370px;
-// }
