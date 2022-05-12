@@ -23,6 +23,51 @@ $menu-border-bottom-color: $primary-color-2;
 $menu-font-color-hover: $secondary-color-2;
 $menu-border-bottom-color-hover: $secondary-color-2;
 
+// MIXING PARAMETERS
+@mixin custom-btn($btn-font-color: $font-color-white, $btn-bg-color: $primary-color, $btn-bg-color-2: $primary-color-2) {
+  button {
+    margin: 20px;
+    // width: 130px;
+    // height: 40px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+      4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    background: linear-gradient(0deg, $btn-bg-color 0%, $btn-bg-color-2 100%);
+    color: $btn-font-color;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      padding: 5px 10px;
+      margin: 1rem 5px;
+    }
+    &:hover {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      top: -180px;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-btn1 3s ease-in-out infinite;
+    }
+  }
+}
+
 body {
   background-image: url("../assets/fond.jpg");
   background-repeat: no-repeat;
@@ -73,8 +118,8 @@ body {
             border-bottom: 2px solid transparent;
             // padding: 5px 0;
             @media screen and (max-width: 576px) {
-              height:  100%;
-              padding: 5px ;
+              height: 100%;
+              padding: 5px;
               font-size: 1.2rem;
               letter-spacing: 3px;
               text-transform: uppercase;
@@ -93,7 +138,7 @@ body {
       }
     }
     div {
-      height: $menu-height ;
+      height: $menu-height;
       @media screen and (max-width: 576px) {
         display: none;
       }
@@ -122,8 +167,9 @@ body {
     @media screen and (max-width: 576px) {
       width: 90%;
     }
-    
-    h1,h2 {
+
+    h1,
+    h2 {
       color: $primary-color;
       text-shadow: 2px 2px 2px $secondary-color;
     }
@@ -148,7 +194,7 @@ body {
       margin: 2rem 0 1rem 0;
       font-size: 20px;
     }
-    p{
+    p {
       font-size: 16px;
     }
   }
@@ -161,6 +207,9 @@ body {
       width: 100%;
       align-items: center;
       justify-content: space-around;
+      @media screen and (max-width: 991px) {
+        font-size: 0.8rem;
+      }
       > div {
         width: 300px;
         margin: 1rem 0;
@@ -171,21 +220,50 @@ body {
           padding-left: 0;
         }
       }
-      .footer_reseau{
+      .footer_newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        p {
+          margin-bottom: 0.5rem;
+        }
+        form {
+          display: flex;
+          align-items: center;
+          @include custom-btn(#000, $secondary-color, $secondary-color-2);
+          button {
+            margin: 0;
+            margin-left: 1rem;
+            font-size: 0.8rem;
+            padding: 4px 6px;
+          }
+        }
+      }
+      .footer_reseau {
         text-align: center;
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 768px) {
           text-align: left;
         }
-        i{
+        i {
           font-size: 30px;
           margin-right: 1rem;
+          @media screen and (max-width: 991px) {
+            font-size: 20px;
+          }
         }
+      }
+      .footer_contact{
+        padding: .7rem;
+      }
+      li{
+        list-style: none;
       }
     }
     .copyright {
       text-align: center;
       font-weight: bold;
-      padding:0 0 1.5rem 0;
+      padding: 0 0 1.5rem 0;
     }
   }
 }
@@ -203,49 +281,6 @@ body {
   text-align: center;
 }
 
-@mixin custom-btn($btn-font-color: $font-color-white, $btn-bg-color: $primary-color, $btn-bg-color-2: $primary-color-2) {
-  button {
-    margin: 20px;
-    // width: 130px;
-    // height: 40px;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-      4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-    outline: none;
-    border: none;
-    background: linear-gradient(0deg, $btn-bg-color 0%, $btn-bg-color-2 100%);
-    color: $btn-font-color;
-    overflow: hidden;
-    @media screen and (max-width: 768px) {
-      font-size: 16px;
-      padding: 5px 10px;
-      margin: 1rem 5px;
-    }
-    &:hover {
-      text-decoration: none;
-      opacity: 0.7;
-    }
-    &:before {
-      position: absolute;
-      content: "";
-      display: inline-block;
-      top: -180px;
-      left: 0;
-      width: 30px;
-      height: 100%;
-      background-color: #fff;
-      animation: shiny-btn1 3s ease-in-out infinite;
-    }
-  }
-}
 @keyframes shiny-btn1 {
   0% {
     -webkit-transform: scale(0) rotate(45deg);
@@ -264,4 +299,3 @@ body {
     opacity: 0;
   }
 }
-

@@ -118,7 +118,8 @@ body main {
     width: 90%;
   }
 }
-body main h1, body main h2 {
+body main h1,
+body main h2 {
   color: #fbcd4b;
   text-shadow: 2px 2px 2px #88a550;
 }
@@ -160,6 +161,11 @@ body footer .footer-content {
   align-items: center;
   justify-content: space-around;
 }
+@media screen and (max-width: 991px) {
+  body footer .footer-content {
+    font-size: 0.8rem;
+  }
+}
 body footer .footer-content > div {
   width: 300px;
   margin: 1rem 0;
@@ -172,10 +178,70 @@ body footer .footer-content .footer_menu {
     padding-left: 0;
   }
 }
+body footer .footer-content .footer_newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+body footer .footer-content .footer_newsletter p {
+  margin-bottom: 0.5rem;
+}
+body footer .footer-content .footer_newsletter form {
+  display: flex;
+  align-items: center;
+}
+body footer .footer-content .footer_newsletter form button {
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+  background: linear-gradient(0deg, #88a550 0%, #86c40b 100%);
+  color: #000;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  body footer .footer-content .footer_newsletter form button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 1rem 5px;
+  }
+}
+body footer .footer-content .footer_newsletter form button:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+body footer .footer-content .footer_newsletter form button:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  -webkit-animation: shiny-btn1 3s ease-in-out infinite;
+          animation: shiny-btn1 3s ease-in-out infinite;
+}
+body footer .footer-content .footer_newsletter form button {
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  padding: 4px 6px;
+}
 body footer .footer-content .footer_reseau {
   text-align: center;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   body footer .footer-content .footer_reseau {
     text-align: left;
   }
@@ -183,6 +249,17 @@ body footer .footer-content .footer_reseau {
 body footer .footer-content .footer_reseau i {
   font-size: 30px;
   margin-right: 1rem;
+}
+@media screen and (max-width: 991px) {
+  body footer .footer-content .footer_reseau i {
+    font-size: 20px;
+  }
+}
+body footer .footer-content .footer_contact {
+  padding: 0.7rem;
+}
+body footer .footer-content li {
+  list-style: none;
 }
 body footer .copyright {
   text-align: center;
