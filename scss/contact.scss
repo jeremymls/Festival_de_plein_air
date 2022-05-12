@@ -6,10 +6,13 @@
     background-color: $secondary-color;
     width: 40%;
     font-size: 1.6rem;
+    @media screen and (max-width: 1140px) {
+        font-size: 1rem;
+    }
     @media screen and (max-width: 768px) {
         width: 90%;
         margin: auto;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     li{
         padding: 2rem 0;
