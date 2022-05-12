@@ -1,3 +1,39 @@
+@-webkit-keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+@keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -283,43 +319,33 @@ body footer .copyright {
   text-align: center;
 }
 
-@-webkit-keyframes shiny-btn1 {
-  0% {
-    -webkit-transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-  80% {
-    -webkit-transform: scale(0) rotate(45deg);
-    opacity: 0.5;
-  }
-  81% {
-    -webkit-transform: scale(4) rotate(45deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(50) rotate(45deg);
-    opacity: 0;
-  }
+.cookie-box {
+  font-size: 1.5rem;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  text-align: center;
+  padding: 1.6rem 2rem;
+  background: #fbcd4b;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.cookie-box--hide {
+  opacity: 0;
+  top: -50%;
 }
 
-@keyframes shiny-btn1 {
-  0% {
-    -webkit-transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-  80% {
-    -webkit-transform: scale(0) rotate(45deg);
-    opacity: 0.5;
-  }
-  81% {
-    -webkit-transform: scale(4) rotate(45deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(50) rotate(45deg);
-    opacity: 0;
-  }
+.cookie-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem 0.85rem;
+  margin-left: 0.45rem;
+  color: #fff;
+  letter-spacing: 1px;
+  background-image: linear-gradient(62deg, #88a550 0%, #86c40b 100%);
 }
+
 p {
   font-size: 20px;
 }/*# sourceMappingURL=mentions.css.map */
