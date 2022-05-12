@@ -167,7 +167,7 @@ body footer .footer-content > div {
 body footer .footer-content .footer_menu {
   padding-left: 2rem;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   body footer .footer-content .footer_menu {
     padding-left: 0;
   }
@@ -250,11 +250,16 @@ body footer .copyright {
   width: 40%;
   font-size: 1.6rem;
 }
+@media screen and (max-width: 1140px) {
+  .infos {
+    font-size: 1rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .infos {
     width: 90%;
     margin: auto;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 .infos li {
